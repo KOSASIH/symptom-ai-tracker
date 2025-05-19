@@ -1,0 +1,97 @@
+/* Custom styles for SymptomAI Tracker */
+body {
+    background-color: #f8f9fa;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.header h1 {
+    color: #0d6efd;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+#result-container {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f0f7ff;
+    display: none;
+    border-left: 4px solid #0d6efd;
+}
+
+.loading {
+    text-align: center;
+    display: none;
+    margin: 30px 0;
+}
+
+.biometric-inputs {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.biometric-inputs .form-group {
+    flex: 1;
+    min-width: 150px;
+}
+
+.btn-primary {
+    padding: 10px 20px;
+    font-weight: 500;
+}
+
+.alert {
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.disclaimer {
+    font-size: 0.8rem;
+    color: #6c757d;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .biometric-inputs {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .biometric-inputs .form-group {
+        width: 100%;
+    }
+}

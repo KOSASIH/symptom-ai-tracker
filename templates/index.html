@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SymptomAI Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>SymptomAI Tracker</h1>
+            <p class="lead">Enter your symptoms and biometric data for AI-powered health assessment</p>
+        </div>
+        
+        <form id="symptom-form">
+            <div class="form-group">
+                <label for="symptoms" class="form-label">Describe your symptoms:</label>
+                <textarea class="form-control" id="symptoms" name="symptoms" rows="4" placeholder="Example: I've had a headache for 3 days, with some fever and fatigue..." required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Upload relevant image (optional):</label>
+                <input type="file" class="form-control" id="image" name="image" accept="image/*">
+                <div class="form-text">Upload any relevant images like rashes, injuries, etc.</div>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Biometric Data (optional):</label>
+                <div class="biometric-inputs">
+                    <div class="form-group">
+                        <label for="heart_rate" class="form-label">Heart Rate (bpm):</label>
+                        <input type="number" class="form-control" id="heart_rate" name="heart_rate" placeholder="e.g., 75">
+                    </div>
+                    <div class="form-group">
+                        <label for="blood_pressure" class="form-label">Blood Pressure (mmHg):</label>
+                        <input type="text" class="form-control" id="blood_pressure" name="blood_pressure" placeholder="e.g., 120/80">
+                    </div>
+                    <div class="form-group">
+                        <label for="temperature" class="form-label">Body Temperature (°C):</label>
+                        <input type="number" step="0.1" class="form-control" id="temperature" name="temperature" placeholder="e.g., 37.0">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Analyze Symptoms</button>
+            </div>
+        </form>
+        
+        <div class="loading mt-4">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <p class="mt-2">Analyzing your symptoms...</p>
+        </div>
+        
+        <div id="result-container">
+            <h3>Assessment Results</h3>
+            <div id="diagnosis-result"></div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
