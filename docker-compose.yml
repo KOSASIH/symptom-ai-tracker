@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  symptom-ai-tracker:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./static/uploads:/app/static/uploads
+    restart: unless-stopped
