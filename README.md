@@ -65,4 +65,4 @@ symptom_ai_tracker/
 
 ## License
 
-This project is for educational and demonstration purposes only.
+This project is for educational and demonstration purposes only.# Additional documentation will be added here
